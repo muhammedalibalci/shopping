@@ -13,7 +13,11 @@ namespace Domain.Interfaces
         Task DeleteAsync(T entity);
         Task UpdateAsync(T entity);
         Task<IEnumerable<T>> GetAllAsync();
-        Task<IEnumerable<T>> GetWhereAsync(Expression<Func<T, bool>> predicate);
+        Task<IEnumerable<T>> GetAllAsync(string include);
+        Task<IEnumerable<T>> GetAllAsync(string firstInclude, string secondInclude);
+        Task<IEnumerable<T>> GetListWhereAsync(Expression<Func<T, bool>> predicate);
+        Task<IEnumerable<T>> GetListWhereAsync(Expression<Func<T, bool>> predicate,string include);
         Task<T> GetAsync(int id);
+        Task<T> GetWhereAsync(Expression<Func<T, bool>> predicate);
     }
 }

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xM5MvIoRbdhpo7etg3YkZTjl/pZuVYqMUYuz/Ln/D2ktivXapyE5JYuP4fSpU9Q0VlzMeGZtXOT8dmLRPg4qLQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Entity\\Entity.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\balci\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

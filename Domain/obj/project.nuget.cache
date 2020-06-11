@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "tnh4SDpYqvWfcJgJBXkJQVrlsGF2PLpmD7MbtDfPOszIjPVhQghTLxezw6+24zg3DHPZFjn58o1Pm7ByyEEiIQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\balci\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
+    "C:\\Users\\balci\\.nuget\\packages\\fluentvalidation.aspnetcore\\8.6.2\\fluentvalidation.aspnetcore.8.6.2.nupkg.sha512",
+    "C:\\Users\\balci\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\8.6.2\\fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512",
+    "C:\\Users\\balci\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\balci\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512",
+    "C:\\Users\\balci\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

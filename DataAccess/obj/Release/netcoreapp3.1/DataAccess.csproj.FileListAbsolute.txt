@@ -1,0 +1,12 @@
+C:\Users\balci\source\repos\WebApplication5\DataAccess\bin\Release\netcoreapp3.1\DataAccess.deps.json
+C:\Users\balci\source\repos\WebApplication5\DataAccess\bin\Release\netcoreapp3.1\DataAccess.dll
+C:\Users\balci\source\repos\WebApplication5\DataAccess\bin\Release\netcoreapp3.1\DataAccess.pdb
+C:\Users\balci\source\repos\WebApplication5\DataAccess\bin\Release\netcoreapp3.1\Entity.dll
+C:\Users\balci\source\repos\WebApplication5\DataAccess\bin\Release\netcoreapp3.1\Entity.pdb
+C:\Users\balci\source\repos\WebApplication5\DataAccess\obj\Release\netcoreapp3.1\DataAccess.csprojAssemblyReference.cache
+C:\Users\balci\source\repos\WebApplication5\DataAccess\obj\Release\netcoreapp3.1\DataAccess.AssemblyInfoInputs.cache
+C:\Users\balci\source\repos\WebApplication5\DataAccess\obj\Release\netcoreapp3.1\DataAccess.AssemblyInfo.cs
+C:\Users\balci\source\repos\WebApplication5\DataAccess\obj\Release\netcoreapp3.1\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\balci\source\repos\WebApplication5\DataAccess\obj\Release\netcoreapp3.1\DataAccess.csproj.CopyComplete
+C:\Users\balci\source\repos\WebApplication5\DataAccess\obj\Release\netcoreapp3.1\DataAccess.dll
+C:\Users\balci\source\repos\WebApplication5\DataAccess\obj\Release\netcoreapp3.1\DataAccess.pdb
