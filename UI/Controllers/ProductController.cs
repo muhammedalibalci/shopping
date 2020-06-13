@@ -23,22 +23,32 @@ namespace API.Controllers
             this.productService = productService;
             _hostingEnvironment = hostingEnvironment;
         }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Product>> Get([FromRoute] int id)
+        {
+            if (string.IsNullOrEmpty(id.ToString()))
+            {
+                return BadRequest();
+            }
+            var product = await productService.GetProduct(id);
+            return product;
+        }
 
-
-        [HttpGet("list/{page = page}")]
-        public async Task<ActionResult<List<Product>>> GetAllProduct([FromRoute] int page)
+        [HttpGet]
+        public async Task<ActionResult<List<Product>>> GetAllProduct([FromQuery] int page, [FromQuery] string category)
         {
             if (string.IsNullOrEmpty(page.ToString()))
             {
                 return BadRequest();
             }
-            var products = await productService.GetAllProduct("Category",page);
+            var products = await productService.GetAllProduct(category, "Category", page);
             return products.Data;
         }
         [HttpPost("add")]
-        public async Task<ActionResult<BaseResponseDto<string>>> AddProduct([FromBody] Product product)
+        public async Task<ActionResult<BaseResponseDto<string>>> AddProduct([FromForm] Product product)
         {
-            var result = await productService.AddProduct(product);
+            var file = Request.Form.Files[0];
+            var result = await productService.AddProduct(product,file);
             if (result.HasError)
             {
                 return BadRequest(result);
@@ -52,7 +62,7 @@ namespace API.Controllers
             {
                 return BadRequest();
             }
-            
+
             var result = await productService.DeleteProduct(id);
             if (result.HasError)
             {
