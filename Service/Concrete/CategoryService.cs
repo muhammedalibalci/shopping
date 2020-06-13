@@ -16,6 +16,12 @@ namespace Service.Concrete
         {
             _repository = repository;
         }
+
+        public async Task<List<Category>> GetAll()
+        {
+            return (List<Category>)await _repository.GetAllAsync();
+        }
+
         public async Task<Category> GetCategory(int id)
         {
             return await _repository.GetAsync(id);

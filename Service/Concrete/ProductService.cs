@@ -25,10 +25,10 @@ namespace Service.Concrete
             _repository = repository;
             _hostingEnvironment = hostingEnvironment;
         }
-        public async Task<BaseResponseDto<List<Product>>> GetAllProduct(string include, int page)
+        public async Task<BaseResponseDto<List<Product>>> GetAllProduct(string categoryName,string include, int page)
         {
             BaseResponseDto<List<Product>> productResponse = new BaseResponseDto<List<Product>>();
-            var products = await _repository.GetAllAsync(include);
+            var products = await _repository.GetListWhereAsync(x=>x.Category.Name == categoryName,include);
             var result = LinqExtensions.GetPaged(products, page, pageSize);
             productResponse.Data = (List<Product>)result.Results;
             return productResponse;
@@ -37,7 +37,7 @@ namespace Service.Concrete
         {
             return await _repository.GetAsync(id);
         }
-        public async Task<BaseResponseDto<string>> AddProduct(Product product)
+        public async Task<BaseResponseDto<string>> AddProduct(Product product,IFormFile file)
         {
             try
             {
@@ -51,6 +51,13 @@ namespace Service.Concrete
                     }
                     return productResponse;
                 }
+                bool resultFileUpload = FileConfiguration.FileUpload(file);
+                if (!resultFileUpload)
+                {
+                    productResponse.Errors.Add("File Upload :","While upload file, occured an error");
+                    return productResponse;
+                }
+                
                 await _repository.CreateAsync(product);
                 productResponse.Data = "Added product succesfully";
                 return productResponse;
@@ -61,6 +68,9 @@ namespace Service.Concrete
             }
 
         }
+
+      
+
         public async Task<BaseResponseDto<string>> DeleteProduct(int id)
         {
             try
