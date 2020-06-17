@@ -85,6 +85,7 @@ namespace Service.Concrete
                 var locker = CreateLockerInstance();
                 string encryptKey = locker.Encrypt(user.Password);
                 user.Password = encryptKey;
+                user.Role = Role.User;
                 createUserResponse.Data = user;
                 await _userRepository.CreateAsync(user);
                 return createUserResponse;
