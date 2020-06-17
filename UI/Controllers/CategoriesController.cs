@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace API.Controllers
 {
     [ApiController]
+    [Authorize(Roles = Role.Admin)]
     [Route("/api/[controller]")]
     public class CategoriesController : ControllerBase
     {

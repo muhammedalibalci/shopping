@@ -1,5 +1,6 @@
 ﻿using Domain.Dto;
 using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,11 +18,9 @@ namespace API.Controllers
     public class ProductController : ControllerBase
     {
         private IProductService productService;
-        private IWebHostEnvironment _hostingEnvironment;
-        public ProductController(IProductService productService, IWebHostEnvironment hostingEnvironment)
+        public ProductController(IProductService productService)
         {
             this.productService = productService;
-            _hostingEnvironment = hostingEnvironment;
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> Get([FromRoute] int id)
@@ -31,6 +30,11 @@ namespace API.Controllers
                 return BadRequest();
             }
             var product = await productService.GetProduct(id);
+            if (product == null)
+            {
+                return NotFound();
+
+            }
             return product;
         }
 
@@ -45,6 +49,7 @@ namespace API.Controllers
             return products.Data;
         }
         [HttpPost("add")]
+        [Authorize(Roles = Role.Admin)]
         public async Task<ActionResult<BaseResponseDto<string>>> AddProduct([FromForm] Product product)
         {
             var file = Request.Form.Files[0];
@@ -56,6 +61,7 @@ namespace API.Controllers
             return result;
         }
         [HttpPost("delete/{id}")]
+        [Authorize(Roles = Role.Admin)]
         public async Task<ActionResult<string>> DeleteProduct([FromRoute] int id)
         {
             if (string.IsNullOrEmpty(id.ToString()))
@@ -71,6 +77,7 @@ namespace API.Controllers
             return result.Data;
         }
         [HttpPost("update")]
+        [Authorize(Roles = Role.Admin)]
         public async Task<ActionResult<BaseResponseDto<string>>> UpdateProduct([FromBody] Product product)
         {
             var result = await productService.UpdateProduct(product);

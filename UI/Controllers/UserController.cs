@@ -1,4 +1,5 @@
 ﻿using Domain.Dto;
+using Domain.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service;
@@ -11,12 +12,11 @@ using System.Threading.Tasks;
 namespace UI.Controllers
 {
     [ApiController]
-    [Authorize]
+    [Authorize(Roles =Role.Admin)]
     [Route("/api/[controller]")]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
-
         public UserController(IUserService userService)
         {
             _userService = userService;
