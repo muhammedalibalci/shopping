@@ -1,17 +1,98 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\balci\\source\\repos\\WebApplication5\\UI\\API.csproj": {}
+    "C:\\Users\\balci\\Desktop\\github\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\balci\\source\\repos\\WebApplication5\\Domain\\Domain.csproj": {
+    "C:\\Users\\balci\\Desktop\\github\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Domain\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\balci\\Desktop\\github\\API\\API.csproj",
+        "projectName": "API",
+        "projectPath": "C:\\Users\\balci\\Desktop\\github\\API\\API.csproj",
         "packagesPath": "C:\\Users\\balci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\balci\\Desktop\\github\\API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\balci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\balci\\Desktop\\github\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\balci\\Desktop\\github\\Domain\\Domain.csproj"
+              },
+              "C:\\Users\\balci\\Desktop\\github\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\balci\\Desktop\\github\\Infrastructure\\Infrastructure.csproj"
+              },
+              "C:\\Users\\balci\\Desktop\\github\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\balci\\Desktop\\github\\Service\\Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\balci\\Desktop\\github\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\balci\\Desktop\\github\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\balci\\Desktop\\github\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\balci\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\balci\\Desktop\\github\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\balci\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,14 +152,14 @@
         }
       }
     },
-    "C:\\Users\\balci\\source\\repos\\WebApplication5\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\balci\\Desktop\\github\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\balci\\Desktop\\github\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\balci\\Desktop\\github\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\balci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\balci\\Desktop\\github\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\balci\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -94,8 +175,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\balci\\source\\repos\\WebApplication5\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Domain\\Domain.csproj"
+              "C:\\Users\\balci\\Desktop\\github\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\balci\\Desktop\\github\\Domain\\Domain.csproj"
               }
             }
           }
@@ -150,14 +231,14 @@
         }
       }
     },
-    "C:\\Users\\balci\\source\\repos\\WebApplication5\\Service\\Service.csproj": {
+    "C:\\Users\\balci\\Desktop\\github\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\balci\\Desktop\\github\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Service\\Service.csproj",
+        "projectPath": "C:\\Users\\balci\\Desktop\\github\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\balci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Service\\obj\\",
+        "outputPath": "C:\\Users\\balci\\Desktop\\github\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\balci\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -173,11 +254,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\balci\\source\\repos\\WebApplication5\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Domain\\Domain.csproj"
+              "C:\\Users\\balci\\Desktop\\github\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\balci\\Desktop\\github\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\balci\\source\\repos\\WebApplication5\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\balci\\Desktop\\github\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\balci\\Desktop\\github\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -202,87 +283,6 @@
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.6.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\balci\\source\\repos\\WebApplication5\\UI\\API.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\balci\\source\\repos\\WebApplication5\\UI\\API.csproj",
-        "projectName": "API",
-        "projectPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\UI\\API.csproj",
-        "packagesPath": "C:\\Users\\balci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\UI\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\balci\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "projectReferences": {
-              "C:\\Users\\balci\\source\\repos\\WebApplication5\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Domain\\Domain.csproj"
-              },
-              "C:\\Users\\balci\\source\\repos\\WebApplication5\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Infrastructure\\Infrastructure.csproj"
-              },
-              "C:\\Users\\balci\\source\\repos\\WebApplication5\\Service\\Service.csproj": {
-                "projectPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Service\\Service.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "dependencies": {
-            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
-              "target": "Package",
-              "version": "[3.1.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[3.1.4, )"
             }
           },
           "imports": [

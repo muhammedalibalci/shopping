@@ -10,6 +10,7 @@ namespace Service.Abstract
     public interface ICategoryService
     {
         Task<Category> GetCategory(int id);
+        Task<List<Category>> GetAll();
 
     }
 }

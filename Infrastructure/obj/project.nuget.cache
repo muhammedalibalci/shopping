@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kYaVpv+U2agWS0ZNdC6sR1IAozjIJMH0UGt50xOjK7gCNVc8mOHCD4C+Vf9h3PHVIpJgFin+EkPMqvpK1FWm8A==",
+  "dgSpecHash": "WrlfDJm8kBZi0xoQG/f/aMsFPV25Bb8mD+F05rywHPS/juVdgcVjs44unzJsdEaNJe1LtcMueXWGJdnlTLb6Lw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\balci\\Desktop\\github\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\balci\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
     "C:\\Users\\balci\\.nuget\\packages\\fluentvalidation.aspnetcore\\8.6.2\\fluentvalidation.aspnetcore.8.6.2.nupkg.sha512",

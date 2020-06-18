@@ -1027,11 +1027,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\balci\\Desktop\\github\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\balci\\Desktop\\github\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\balci\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\balci\\Desktop\\github\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\balci\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1047,8 +1047,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\balci\\source\\repos\\WebApplication5\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\balci\\source\\repos\\WebApplication5\\Domain\\Domain.csproj"
+            "C:\\Users\\balci\\Desktop\\github\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\balci\\Desktop\\github\\Domain\\Domain.csproj"
             }
           }
         }
