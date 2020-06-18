@@ -17,8 +17,9 @@ namespace Domain.Models
         public string Phone { get; set; }
         public int Timestamp { get; set; }
         public int Amount { get; set; }
+        [NotMapped]
+        public IReadOnlyList<OrderItem> OrderItems { get; set; }
         public int? UserId { get; set; }
         public User User { get; set; }
-        public List<Product> Products { get; set; }
     }
 }

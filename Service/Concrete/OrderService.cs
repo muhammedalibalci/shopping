@@ -41,20 +41,21 @@ namespace Service.Concrete
                 }
                 order.UserId = userId;
                 order.Timestamp = (int)new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds();
-
-                foreach (var product in order.Products)
+                
+                
+                orderResponse.Data = "Added order succesfully";
+                await _repository.CreateAsync(order);
+                foreach (var product in order.OrderItems)
                 {
                     OrderDetail orderDetail = new OrderDetail
                     {
                         OrderId = order.Id,
-                        ProductId = product.Id,
-                        Price = product.Price,
-                        Quantity = order.Products.Count
+                        ProductId = product.ItemOrdered.Id,
+                        Price = product.ItemOrdered.Price,
+                        Quantity = product.Quantity
                     };
                     await _orderDetailService.Add(orderDetail);
                 }
-                orderResponse.Data = "Added order succesfully";
-                await _repository.CreateAsync(order);
                 return orderResponse;
             }
             catch (Exception e)

@@ -8,8 +8,6 @@ using Service.Abstract;
 using Service.Helpers;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Service.Concrete
@@ -18,12 +16,10 @@ namespace Service.Concrete
     {
         private const int pageSize = 5;
         private IRepository<Product> _repository;
-        private  IWebHostEnvironment _hostingEnvironment;
 
-        public ProductService(IRepository<Product> repository, IWebHostEnvironment hostingEnvironment)
+        public ProductService(IRepository<Product> repository)
         {
             _repository = repository;
-            _hostingEnvironment = hostingEnvironment;
         }
         public async Task<BaseResponseDto<List<Product>>> GetAllProduct(string categoryName,string include, int page)
         {
@@ -68,9 +64,6 @@ namespace Service.Concrete
             }
 
         }
-
-      
-
         public async Task<BaseResponseDto<string>> DeleteProduct(int id)
         {
             try

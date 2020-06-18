@@ -56,7 +56,7 @@ namespace Service.Concrete
                 user.AccessToken = token.AccessToken;
                 user.RefreshToken = token.RefreshToken;
                 user.RefreshTokenEndDate = token.Expiration.AddDays(1);
-                UserDto userDto = new UserDto(user.Id,user.FirstName,user.LastName,user.Address,user.AccessToken,user.Role);
+                UserDto userDto = new UserDto(user.Id, user.FirstName, user.LastName, user.Address, user.AccessToken, user.Role);
                 userResponse.Data = userDto;
                 await _userRepository.UpdateAsync(user);
                 return userResponse;

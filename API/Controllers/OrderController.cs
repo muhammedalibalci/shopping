@@ -33,8 +33,8 @@ namespace API.Controllers
             var products = await orderService.GetAllOrder(id,"User");
             return products.Data;
         }
-        [HttpPost("add/{productId}")]
-        public async Task<ActionResult<BaseResponseDto<string>>> AddOrder([FromBody] Order order,[FromRoute] int productId)
+        [HttpPost("add")]
+        public async Task<ActionResult<BaseResponseDto<string>>> AddOrder([FromBody] Order order)
         {
             var userId = HttpContext.User.Identity.Name;
             var result = await orderService.AddOrder(order, Convert.ToInt32(userId));
