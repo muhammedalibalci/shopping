@@ -57,7 +57,7 @@ namespace Service.Concrete
                     productResponse.Errors.Add("File Upload :","While upload file, occured an error");
                     return productResponse;
                 }
-                
+                product.Image = file.FileName;
                 await _repository.CreateAsync(product);
                 productResponse.Data = "Added product succesfully";
                 return productResponse;

@@ -53,8 +53,6 @@ namespace Service.Concrete
                     };
                     await _orderDetailService.Add(orderDetail);
                 }
-
-
                 orderResponse.Data = "Added order succesfully";
                 await _repository.CreateAsync(order);
                 return orderResponse;

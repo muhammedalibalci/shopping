@@ -49,7 +49,6 @@ namespace API.Controllers
             return products.Data;
         }
         [HttpPost("add")]
-        [Authorize(Roles = Role.Admin)]
         public async Task<ActionResult<BaseResponseDto<string>>> AddProduct([FromForm] Product product)
         {
             var file = Request.Form.Files[0];

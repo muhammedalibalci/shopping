@@ -27,7 +27,7 @@ namespace Service
             User user = await _userRepository.GetAsync(id);
             if (user != null)
             {
-                UserDto userDto = new UserDto(user.Id, user.FirstName, user.LastName, user.Address, user.AccessToken);
+                UserDto userDto = new UserDto(user.Id, user.FirstName, user.LastName, user.Address, user.AccessToken,user.Role);
                 getUserResponse.Data = userDto;
             }
             else

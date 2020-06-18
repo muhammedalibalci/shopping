@@ -37,7 +37,7 @@ namespace API.Controllers
         public async Task<ActionResult<BaseResponseDto<string>>> AddOrder([FromBody] Order order,[FromRoute] int productId)
         {
             var userId = HttpContext.User.Identity.Name;
-            var result = await orderService.AddOrder(order, Convert.ToInt32(userId), productId);
+            var result = await orderService.AddOrder(order, Convert.ToInt32(userId));
             if (result.HasError)
             {
                 return BadRequest(result);

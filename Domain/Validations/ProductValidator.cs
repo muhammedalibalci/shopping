@@ -12,7 +12,6 @@ namespace Domain.Validations
         {
             RuleFor(c => c.Name).NotEmpty().WithMessage("Name must be filled out");
             RuleFor(c => c.Description).NotEmpty().WithMessage("Description name must be filled out");
-            RuleFor(c => c.Image).NotEmpty().WithMessage("Image name must be filled out");
             RuleFor(c => c.Price).NotEmpty().WithMessage("Price name must be filled out")
                 .Must(value => value >= 0).WithMessage("Price must not negative");
             RuleFor(c => c.Stock).NotEmpty().WithMessage("Stock name must be filled out")
