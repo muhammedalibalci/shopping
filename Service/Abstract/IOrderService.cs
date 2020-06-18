@@ -10,7 +10,7 @@ namespace Service.Abstract
     public interface IOrderService
     {
         Task<BaseResponseDto<List<Order>>> GetAllOrder(int id, string include);
-        Task<BaseResponseDto<string>> AddOrder(Order order,int userId, int productId);
+        Task<BaseResponseDto<string>> AddOrder(Order order,int userId);
         Task<BaseResponseDto<string>> DeleteOrder(int id);
         Task<BaseResponseDto<string>> UpdateOrder(Order product);
     }

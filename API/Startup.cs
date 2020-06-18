@@ -47,6 +47,7 @@ namespace UI
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IOrderDetailService, OrderDetailService>();
 
             var key = Encoding.ASCII.GetBytes("this is my custom Secret key for authnetication");
 

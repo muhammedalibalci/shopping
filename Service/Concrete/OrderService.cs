@@ -12,10 +12,12 @@ namespace Service.Concrete
 {
     public class OrderService : IOrderService
     {
-        IRepository<Order> _repository;
-        public OrderService(IRepository<Order> repository)
+        private IRepository<Order> _repository;
+        private IOrderDetailService _orderDetailService;
+        public OrderService(IRepository<Order> repository, IOrderDetailService orderDetailService)
         {
             _repository = repository;
+            _orderDetailService = orderDetailService;
         }
         public async Task<BaseResponseDto<List<Order>>> GetAllOrder(int id, string include)
         {
@@ -23,7 +25,7 @@ namespace Service.Concrete
             orderResponse.Data = (List<Order>)await _repository.GetListWhereAsync(x => x.UserId == id, include);
             return orderResponse;
         }
-        public async Task<BaseResponseDto<string>> AddOrder(Order order,int userId,int productId)
+        public async Task<BaseResponseDto<string>> AddOrder(Order order,int userId)
         {
             try
             {
@@ -33,13 +35,26 @@ namespace Service.Concrete
                 {
                     foreach (var validationFailure in result.Errors)
                     {
-                        orderResponse.Errors.Add("",validationFailure.ErrorMessage);
+                        orderResponse.Errors.Add("Error:",validationFailure.ErrorMessage);
                     }
                     return orderResponse;
                 }
                 order.UserId = userId;
-                order.ProductId = productId;
                 order.Timestamp = (int)new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds();
+
+                foreach (var product in order.Products)
+                {
+                    OrderDetail orderDetail = new OrderDetail
+                    {
+                        OrderId = order.Id,
+                        ProductId = product.Id,
+                        Price = product.Price,
+                        Quantity = order.Products.Count
+                    };
+                    await _orderDetailService.Add(orderDetail);
+                }
+
+
                 orderResponse.Data = "Added order succesfully";
                 await _repository.CreateAsync(order);
                 return orderResponse;
