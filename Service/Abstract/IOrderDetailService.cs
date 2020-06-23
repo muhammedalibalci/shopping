@@ -9,6 +9,7 @@ namespace Service.Abstract
 {
     public interface IOrderDetailService
     {
+        Task<List<OrderDetail>> GetAll(int id);
         Task<BaseResponseDto<string>> Add(OrderDetail orderDetail);
     }
 }

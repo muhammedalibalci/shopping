@@ -1,9 +1,11 @@
 ﻿using Domain.Dto;
 using Domain.Interfaces;
 using Domain.Models;
+using Infrastructure;
 using Service.Abstract;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,16 +23,24 @@ namespace Service.Concrete
             try
             {
                 BaseResponseDto<string> response = new BaseResponseDto<string>();
+                var result = GetAll(43).Result;
                 await _repository.CreateAsync(orderDetail);
                 response.Data = "Added Succefully";
                 return response;
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
                 throw;
             }
        
         }
+
+        public async Task<List<OrderDetail>> GetAll(int id)
+        {
+            var result = await _repository.GetListWhereAsync(x => x.OrderId == id);
+            return (List<OrderDetail>)result;
+        }
+
     }
 }

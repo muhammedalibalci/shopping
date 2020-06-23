@@ -21,6 +21,11 @@ namespace Service.Concrete
         }
         public async Task<BaseResponseDto<List<Order>>> GetAllOrder(int id, string include)
         {
+
+      
+
+
+
             BaseResponseDto<List<Order>> orderResponse = new BaseResponseDto<List<Order>>();
             orderResponse.Data = (List<Order>)await _repository.GetListWhereAsync(x => x.UserId == id, include);
             return orderResponse;
@@ -41,8 +46,6 @@ namespace Service.Concrete
                 }
                 order.UserId = userId;
                 order.Timestamp = (int)new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds();
-                
-                
                 orderResponse.Data = "Added order succesfully";
                 await _repository.CreateAsync(order);
                 foreach (var product in order.OrderItems)

@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 using Domain.Interfaces;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 namespace Infrastructure.Repositories
 {
@@ -98,7 +99,5 @@ namespace Infrastructure.Repositories
             Dispose(true);
             GC.SuppressFinalize(this);
         }
-
-      
     }
 }
